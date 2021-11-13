@@ -1,5 +1,5 @@
-import paramsHelper from "./app/paramsHelper.js"
-import paramsConfig from "./app/paramsConfig.js"
+import paramsHelper from "./src/paramsHelper.js"
+import paramsConfig from "./src/paramsConfig.js"
 
 const params = process.argv.slice(2)
 const currentParameters = paramsHelper.parseParameters(params)
