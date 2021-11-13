@@ -1,6 +1,6 @@
-const atbash = require("./ciphers/atbash")
-const caesar = require("./ciphers/caesar")
-const rot8 = require("./ciphers/rot8")
+import atbash from "./ciphers/atbash.js"
+import caesar from "./ciphers/caesar.js"
+import rot8 from "./ciphers/rot8.js"
 
 const string = "ABCDE-abcde:XYZ-xyz"
 

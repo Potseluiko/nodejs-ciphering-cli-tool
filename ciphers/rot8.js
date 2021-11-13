@@ -1,6 +1,6 @@
-const caesar = require("./caesar")
+import caesar from "./caesar.js"
 
 const encode = (value) => caesar.encode(value, 8)
 const decode = (value) => caesar.decode(value, 8)
 
-module.exports = { encode, decode }
+export default { encode, decode }
