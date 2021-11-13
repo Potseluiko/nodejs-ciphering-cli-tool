@@ -1,14 +1,22 @@
-import atbash from "./ciphers/atbash.js"
-import caesar from "./ciphers/caesar.js"
-import rot8 from "./ciphers/rot8.js"
+import paramsHelper from "./app/paramsHelper.js"
+import paramsConfig from "./app/paramsConfig.js"
 
-const string = "ABCDE-abcde:XYZ-xyz"
+const params = process.argv.slice(2)
+const currentParameters = paramsHelper.parseParameters(params)
 
-console.log("atbash: ", string, " => ", atbash.encode(string))
-console.log("caesar (encode 3): ", string, " => ", caesar.encode(string, 3))
-console.log("caesar (decode 3)): ", string, " => ", caesar.decode(string, 3))
-console.log("caesar (encode 3 + decode 3): ", string, " => ", caesar.decode(caesar.encode(string, 3), 3))
-console.log("caesar (encode 8): ", string, " => ", caesar.encode(string, 8))
-console.log("rot8 (encode): ", string, " => ", rot8.encode(string))
-console.log("caesar (decode 8): ", string, " => ", caesar.decode(string, 8))
-console.log("rot8 (decode): ", string, " => ", rot8.decode(string))
+const paramsErrors = paramsHelper.validateParameters(currentParameters, paramsConfig)
+
+if (paramsErrors.length) {
+  console.error(paramsErrors.join(" "))
+  process.exit(1)
+}
+
+const builtParams = paramsHelper.buildParameters(currentParameters, paramsConfig)
+
+const config = builtParams["--config"]
+const input = builtParams["--input"]
+const output = builtParams["--output"]
+
+console.log("config = ", config)
+console.log("input = ", input)
+console.log("output = ", output)
