@@ -15,6 +15,10 @@
   },
   "homepage": "https://github.com/Potseluiko/nodejs-ciphering-cli-tool#readme",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "prettier": "prettier --write \"**/*.{js,md,html,json}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
   }
 }
