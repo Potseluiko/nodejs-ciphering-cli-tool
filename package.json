@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-ciphering-cli-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Potseluiko/nodejs-ciphering-cli-tool.git"
+  },
+  "author": "Alexandra Potseluiko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Potseluiko/nodejs-ciphering-cli-tool/issues"
+  },
+  "homepage": "https://github.com/Potseluiko/nodejs-ciphering-cli-tool#readme",
+  "scripts": {
+    "start": "node index.js",
+    "prettier": "prettier --write \"**/*.{js,md,html,json}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
