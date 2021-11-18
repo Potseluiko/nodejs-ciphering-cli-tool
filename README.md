@@ -2,7 +2,7 @@
 
 Run project:
 ```bash
-node index.js --config C0-C1-A-R0-R1  --input "./input.txt" --output "./output.txt"
+$ node index.js --config C0-C1-A-R0-R1  --input "./input.txt" --output "./output.txt"
 ```
 
 CLI tool accepts 3 options (short alias and full name):
@@ -32,5 +32,16 @@ $ node index.js -c "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"
 
 > output.txt
 > `Myxn xn nbdobm. Tbnnfzb ferlm "_" nhteru!`
+
+
+## Run tests
+```bash
+$ npm run test
+```
+
+Check tests coverage:
+```bash
+$ npm run test:coverage
+```
 
 Enjoy!
