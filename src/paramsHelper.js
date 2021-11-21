@@ -82,4 +82,4 @@ const buildParameters = (params, paramsConfig) => {
   return builtParams
 }
 
-export default { parseParameters, validateParameters, buildParameters }
+module.exports = { parseParameters, validateParameters, buildParameters }

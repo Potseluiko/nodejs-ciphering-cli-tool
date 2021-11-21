@@ -1,9 +1,11 @@
-import fs from "fs"
+const fs = require("fs")
 
-export function createOutputStream(output) {
+function createOutputStream(output) {
   if (!output) {
     return process.stdout
   }
 
   return fs.createWriteStream(output)
 }
+
+module.exports = { createOutputStream }

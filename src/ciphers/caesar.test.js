@@ -1,4 +1,4 @@
-import caesar from "./caesar.js"
+const caesar = require("./caesar.js")
 
 describe("Caesar encode", () => {
   test("should not change value if no second param", () => {

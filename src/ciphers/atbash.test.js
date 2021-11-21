@@ -1,4 +1,4 @@
-import atbash from "./atbash.js"
+const atbash = require("./atbash.js")
 
 describe("Atbash", () => {
   test("should replace uppercase letters", () => {

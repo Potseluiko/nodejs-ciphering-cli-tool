@@ -1,8 +1,8 @@
-import { Transform } from "stream"
+const { Transform } = require("stream")
 
-import atbash from "./ciphers/atbash.js"
-import caesar from "./ciphers/caesar.js"
-import rot8 from "./ciphers/rot8.js"
+const atbash = require("./ciphers/atbash.js")
+const caesar = require("./ciphers/caesar.js")
+const rot8 = require("./ciphers/rot8.js")
 
 function cipherByMark(cipherMark) {
   switch (cipherMark) {
@@ -21,10 +21,12 @@ function cipherByMark(cipherMark) {
   }
 }
 
-export function createCipherStream(cipherMark) {
+function createCipherStream(cipherMark) {
   return new Transform({
     transform(chunk, encoding, callback) {
       callback(null, cipherByMark(cipherMark)(String(chunk)))
     }
   })
 }
+
+module.exports = { createCipherStream }

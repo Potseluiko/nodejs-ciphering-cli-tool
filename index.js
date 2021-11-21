@@ -1,9 +1,9 @@
-import paramsHelper from "./src/paramsHelper.js"
-import paramsConfig from "./src/paramsConfig.js"
+const paramsHelper = require("./src/paramsHelper.js")
+const paramsConfig = require("./src/paramsConfig.js")
 
-import { createCipherStream } from "./src/cipher-stream.js"
-import { createInputStream } from "./src/input-stream.js"
-import { createOutputStream } from "./src/output-stream.js"
+const { createCipherStream } = require("./src/cipher-stream.js")
+const { createInputStream } = require("./src/input-stream.js")
+const { createOutputStream } = require("./src/output-stream.js")
 
 // Parameters:
 const params = process.argv.slice(2)

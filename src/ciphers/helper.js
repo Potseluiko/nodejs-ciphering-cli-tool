@@ -27,4 +27,4 @@ const encodeHelper = (value, getCharFn) => {
   return newCharsList.join("")
 }
 
-export { encodeHelper }
+module.exports = { encodeHelper }

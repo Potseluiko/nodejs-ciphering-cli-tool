@@ -1,4 +1,4 @@
-import rot8 from "./rot8.js"
+const rot8 = require("./rot8.js")
 
 describe("Rot8 encode", () => {
   test("should replace uppercase letters", () => {

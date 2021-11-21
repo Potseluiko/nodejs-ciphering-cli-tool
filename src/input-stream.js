@@ -1,6 +1,6 @@
-import fs from "fs"
+const fs = require("fs")
 
-export function createInputStream(input) {
+function createInputStream(input) {
   if (!input) {
     return process.stdin
   }
@@ -12,3 +12,5 @@ export function createInputStream(input) {
 
   return fs.createReadStream(input)
 }
+
+module.exports = { createInputStream }

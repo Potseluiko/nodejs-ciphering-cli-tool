@@ -1,4 +1,4 @@
-import { encodeHelper } from "./helper.js"
+const { encodeHelper } = require("./helper.js")
 
 describe("Rot8 encode", () => {
   test("should not change value (NOT latin letters)", () => {
