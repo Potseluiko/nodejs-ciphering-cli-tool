@@ -16,8 +16,8 @@
   "scripts": {
     "start": "node index.js",
     "prettier": "prettier --write \"**/*.{js,md,html,json}\"",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "jest": "^27.3.1",
