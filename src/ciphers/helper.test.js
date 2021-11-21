@@ -1,6 +1,6 @@
 const { encodeHelper } = require("./helper.js")
 
-describe("Rot8 encode", () => {
+describe("Helper", () => {
   test("should not change value (NOT latin letters)", () => {
     const genCharFn = (charCode, startCharCode, endCharCode) => String.fromCharCode(charCode + 100)
 
@@ -23,5 +23,11 @@ describe("Rot8 encode", () => {
     }
 
     expect(encodeHelper("Здесь ABCD находится!", genCharFn)).toBe("Здесь **** находится!")
+  })
+
+  test("should not crash if no values and return empty string", () => {
+    const genCharFn = (charCode, startCharCode, endCharCode) => String.fromCharCode(charCode)
+
+    expect(encodeHelper(undefined, genCharFn)).toBe("")
   })
 })
