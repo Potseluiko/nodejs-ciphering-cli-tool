@@ -1,0 +1,33 @@
+const { encodeHelper } = require("./helper.js")
+
+describe("Helper", () => {
+  test("should not change value (NOT latin letters)", () => {
+    const genCharFn = (charCode, startCharCode, endCharCode) => String.fromCharCode(charCode + 100)
+
+    expect(encodeHelper("Здесь был я!", genCharFn)).toBe("Здесь был я!")
+  })
+
+  test("should not change value (latin letters)", () => {
+    const genCharFn = (charCode, startCharCode, endCharCode) => String.fromCharCode(charCode)
+
+    expect(encodeHelper("ABCD", genCharFn)).toBe("ABCD")
+  })
+
+  test("should change letters to '*' if it is in the interval", () => {
+    const genCharFn = (charCode, startCharCode, endCharCode) => {
+      if (charCode >= startCharCode && charCode <= endCharCode) {
+        return "*"
+      }
+
+      return String.fromCharCode(charCode)
+    }
+
+    expect(encodeHelper("Здесь ABCD находится!", genCharFn)).toBe("Здесь **** находится!")
+  })
+
+  test("should not crash if no values and return empty string", () => {
+    const genCharFn = (charCode, startCharCode, endCharCode) => String.fromCharCode(charCode)
+
+    expect(encodeHelper(undefined, genCharFn)).toBe("")
+  })
+})

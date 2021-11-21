@@ -1,4 +1,4 @@
-import { encodeHelper } from "./helper.js"
+const { encodeHelper } = require("./helper.js")
 
 const encode = (value, shift = 0) => {
   return encodeHelper(value, (charCode, startCharCode, endCharCode) => {
@@ -16,4 +16,4 @@ const decode = (value, shift = 0) => {
   })
 }
 
-export default { encode, decode }
+module.exports = { encode, decode }

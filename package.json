@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Potseluiko/nodejs-ciphering-cli-tool.git"
@@ -16,9 +15,12 @@
   "homepage": "https://github.com/Potseluiko/nodejs-ciphering-cli-tool#readme",
   "scripts": {
     "start": "node index.js",
-    "prettier": "prettier --write \"**/*.{js,md,html,json}\""
+    "prettier": "prettier --write \"**/*.{js,md,html,json}\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "jest": "^27.3.1",
     "prettier": "^2.4.1"
   }
 }
